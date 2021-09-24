@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+users = User.create([
+  {
+    name: 'Kirito',
+    email: 'kirito@mail.ru'
+  },
+  {
+   name: 'Asuna',
+   email: 'asuna@mail.ru'
+ }
+])
+
+events = Event.create([
+ {
+  title: 'Mega party2',
+  description: 'invated all boys',
+  address: 'Lipki',
+  datetime: Time.now,
+  user_id: 1
+ },
+ {
+  title: 'Mega party2',
+  description: 'invated all girls',
+  address: 'Lipki',
+  datetime: Time.now,
+  user_id: 1
+ }
+])
