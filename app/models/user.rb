@@ -1,9 +1,17 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   has_many :evetns
  
-  validates :name,  length: {maximum:35}
-  validates :email, presence: true
-  validates :email, uniqueness: true, on: [:create, :update] 
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP}, on: [:create, :update]
+  validates :name, presence: true, length: {maximum:35}
+
+  before_validation :set_name, on: :create
+
+  private 
+
+  def set_name
+    self.name = "Странник №#{rand(777)}" if self.name.blank?
+  end
 end
