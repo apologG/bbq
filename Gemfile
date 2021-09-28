@@ -7,6 +7,7 @@ gem 'rails', '~> 5.2.6'
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'devise'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'twitter-bootstrap-rails'
 
