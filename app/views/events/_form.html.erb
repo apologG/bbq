@@ -1,23 +1,25 @@
 <%= form_for(@event) do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
-
+<div class="col-md-4">
+</div>
+<div class="col-md-4 buffer-top">
   <div class="form-group">
-    <%= f.label :title %>
+    <%= f.label :title, "Название" %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :address %>
+    <%= f.label :address, "Адрес" %>
     <%= f.text_field :address, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :datetime %>
+    <%= f.label :datetime, "Дата" %>
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description, "Описание" %>
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
@@ -26,3 +28,4 @@
     или <%= link_to 'вернуться', :back %>
   </div>
 <% end %>
+</div>

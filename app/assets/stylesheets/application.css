@@ -14,12 +14,18 @@
  *= require_self
  *= require events
  */
+ input, .form-group>p{
+   color: black;
+ }
 .buffer-top {
   margin-top: 20px;
 }
 
 .buffer-bottom {
   margin-bottom: 20px;
+}
+.buffer-right {
+  margin-right: 10px;
 }
 
 .buffer-both {

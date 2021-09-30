@@ -1,57 +1,42 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "BBQ" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Массовка" %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", :media => "all" %>
-
-     <%= javascript_include_tag "application" %>
-
-
+    <%= javascript_include_tag "application" %>
   </head>
-  <body>
-
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to "BBQ!", root_path, class:'navbar-brand'%>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-          <% if user_signed_in? %>
-            <li><%=link_to 'Профиль', current_user %></li>
-            <li><%=link_to 'Выйти', destroy_user_session_path, :method => :delete  %></li>
-          <% else %>
-            <li><%=link_to 'Войти', new_user_session_path %></li>
-            <li><%=link_to 'Зарегистрироваться', new_user_registration_path%></li>
-          <% end %>
-          </ul>
+  
+  <body class="d-flex h-100 text-center text-white bg-dark" >
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header>
+        <div>
+          <h3 class="float-md-start mb-0"><%= link_to "Массовка", root_path, class:'text-decoration-none text-white' %></h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <% if user_signed_in? %>
+              <%= link_to 'Профиль', current_user, class:'nav-link btn btn-success btn-sm buffer-right' %>
+              <%= link_to 'Выйти', destroy_user_session_path, :method => :delete, class:'nav-link btn btn-danger btn-sm' %>
+            <% else %>
+              <%= link_to 'Войти', new_user_session_path, class:'nav-link btn btn-success btn-sm buffer-right' %>
+              <%= link_to 'Регистрация', new_user_registration_path, class:'nav-link btn btn-warning btn-sm' %>
+            <% end %>
+          </nav>
         </div>
-      </div>
-    </div>
+     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-        <div class="col-lg-3">
-        </div><!--/span-->
-      </div><!--/row-->
+      <main>
+        <%= bootstrap_flash %>
+        <%= yield %>
+      </main>
 
-      <footer>
+      <footer class="mt-auto text-white-50">
         <p>&copy; Alexander Rozilaynen 2021</p>
       </footer>
-
-    </div> <!-- /container -->
-
+    </div>
   </body>
 </html>
