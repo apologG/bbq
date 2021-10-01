@@ -4,7 +4,8 @@ class EventsController < ApplicationController
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.all
+     @events = Event.all.order(datetime: :desc)
+    #@events = Event.where(datetime: 5.day.ago..Date.today).order(datetime: :desc)
   end
 
   def show
