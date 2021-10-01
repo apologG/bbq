@@ -8,6 +8,8 @@ gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
+gem 'devise-i18n'
+gem 'russian'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'twitter-bootstrap-rails'
 

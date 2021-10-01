@@ -58,6 +58,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.0)
+      devise (>= 4.8.0)
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.4)
@@ -130,6 +132,8 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     ruby_dep (1.5.0)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -171,10 +175,12 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   devise
+  devise-i18n
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
   rails (~> 5.2.6)
+  russian
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
