@@ -16,9 +16,11 @@ ru:
     controllers:
       events:
         created: 'Событие создано'
-        updated: 'Собыитие обновлено'
-        destroyed: 'Собыитие удалено'
+        updated: 'Событие обновлено'
+        destroyed: 'Событие удалено'
+      users:
+        updated: 'Профиль обновлен'
   app:
     title: 'Массовка'
     author: 'Александр Розилайнен'
-  
+    are_you_sure_event: 'Вы уверены что хотите удалить событие?'

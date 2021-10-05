@@ -6,6 +6,7 @@ ruby '2.6.6'
 gem 'rails', '~> 5.2.6'
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
+gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-i18n'
