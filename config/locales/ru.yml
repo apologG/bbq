@@ -13,14 +13,30 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-    controllers:
-      events:
-        created: 'Событие создано'
-        updated: 'Событие обновлено'
-        destroyed: 'Событие удалено'
-      users:
-        updated: 'Профиль обновлен'
+  controllers:
+    events:
+      created: 'Вы создали новое мероприятие'
+      updated: 'Вы успешно обновили событие'
+      destroyed: 'Вы удалили мероприятие'
+    users: 
+      updated: 'Вы обновили свой профиль'
+    comments:
+      created: 'Вы добавили новый комментарий'
+      destroyed: 'Вы удалили комментарий'
+      error: 'Ошибка добавления/удаления комментария'
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Ошибка подписки на событие'
+
   app:
     title: 'Массовка'
     author: 'Александр Розилайнен'
-    are_you_sure_event: 'Вы уверены что хотите удалить событие?'
+
+  comments:
+    comment:
+      destroy_confirm: "Вы уверены что хотите удалить комментарий?"
+
+  events:
+    event:
+      destroy_confirm: "Вы уверены что хотите удалить событие?"
