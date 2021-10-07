@@ -12,11 +12,11 @@
     <%= javascript_include_tag "application" %>
   </head>
   
-  <body class="d-flex h-100 text-center text-white bg-dark" >
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <body class="text-center text-white bg-dark" >
+    <div class="cover-container d-flex w-100 h-100 p-3 flex-column">
       <header>
-        <div class="buffer-both">
-          <h3 class="float-md-start mb-0"><%= link_to t('app.title'), root_path, class:'text-decoration-none text-white' %></h3>
+        <div class="buffer-both ">
+          <h3 class="float-md-start mb-0 "><%= link_to t('app.title'), root_path, class:'text-decoration-none text-white' %></h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <% if user_signed_in? %>
               <%= link_to fa_icon('user'), current_user, class:'btn-lg buffer-right' %>
@@ -48,7 +48,7 @@
           <% end %>
           <%= yield %>
       </main>
-<%=  %>
+
       <footer class="mt-auto text-white-50">
         <p>&copy; <%= t('app.author') %>  2021</p>
       </footer>
