@@ -6,17 +6,17 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    if @subscription.save
-      redirect_to @event, notice: 'Subscription was successfully created.'
+    if @new_subscription.save
+      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
-      render 'event/show', alert: 'Alert!!!'
+      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
     end
   end
 
   def destroy
     message = { notice: I18n.t('controllers.subscriptions.destroyed') }
     
-    if current_user_can_edit?(@comment)
+    if current_user_can_edit?(@subscription)
       @subscription.destroy
     else
       message = { alert: I18n.t('controllers.subscriptions.error') }

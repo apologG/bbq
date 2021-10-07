@@ -3,6 +3,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'События'
+      comment: 'Комментарии'
+      subscription: 'Подписка'
     attributes:
       user:
         name: 'Имя'
@@ -13,6 +15,12 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Комментарий'
+        user_name: 'Имя'
+      subscription:
+        user_name: 'Имя'
+        user_email: 'Email'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -36,7 +44,9 @@ ru:
   comments:
     comment:
       destroy_confirm: "Вы уверены что хотите удалить комментарий?"
-
   events:
     event:
       destroy_confirm: "Вы уверены что хотите удалить событие?"
+  subscriptions:
+    subscription:
+      destroy_confirm: "Вы уверены что хотите отказаться от участия?"

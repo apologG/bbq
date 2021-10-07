@@ -1,5 +1,9 @@
 module ApplicationHelper
- def current_user_can_edit?(event)
-  user_signed_in? && event.user == current_user
- end
+  def user_avatar(user)
+    asset_path('user.png')
+  end
+
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
 end

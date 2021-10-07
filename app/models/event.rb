@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_many :subscriptions
-  has_many :subscribers, through: :subscriptions, sourse: :user
+  has_many :subscribers, through: :subscriptions, source: :user
 
   validates :user, presence: true
   validates :title, presence: true, length: {maximum:255}
