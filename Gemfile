@@ -13,6 +13,8 @@ gem 'devise-i18n'
 gem 'russian'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'twitter-bootstrap-rails'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development, :test do
   gem 'sqlite3'
