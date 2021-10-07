@@ -10,6 +10,7 @@ ru:
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+        avatar: 'Фото профиля'
       event:
         title: 'Название'
         address: 'Место проведения'
