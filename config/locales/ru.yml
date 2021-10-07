@@ -40,6 +40,8 @@ ru:
   app:
     title: 'Массовка'
     author: 'Александр Розилайнен'
+  errors:
+    dublicate_email: 'уже используется'
 
   comments:
     comment:
