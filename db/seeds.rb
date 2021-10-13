@@ -19,20 +19,3 @@ users = User.create([
    password_confirmation: '123123'
  }
 ])
-
-events = Event.create([
- {
-  title: 'Mega party2',
-  description: 'invated all boys',
-  address: 'Lipki',
-  datetime: Time.now,
-  user_id: 1
- },
- {
-  title: 'Mega party2',
-  description: 'invated all girls',
-  address: 'Lipki',
-  datetime: Time.now,
-  user_id: 1
- }
-])

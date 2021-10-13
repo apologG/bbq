@@ -16,6 +16,8 @@ gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
 gem 'rmagick'
 
+# gem 'fog-aws' amazon cloud for foto
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
