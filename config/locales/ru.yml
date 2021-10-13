@@ -22,6 +22,8 @@ ru:
       subscription:
         user_name: 'Имя'
         user_email: 'Email'
+      photo:
+        photo: 'Фото'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -37,7 +39,10 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Ошибка подписки на событие'
-
+    photos:
+      created: 'Фотография добавлена'
+      destroyed: 'Фотография удалена'
+      error: 'Ошибка добавления/удаления фотографии'
   app:
     title: 'Массовка'
     author: 'Александр Розилайнен'
@@ -53,3 +58,6 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: "Вы уверены что хотите отказаться от участия?"
+  photos:
+    photo:
+      destroy_confirm: "Вы уверены что хотите удалить фото?"

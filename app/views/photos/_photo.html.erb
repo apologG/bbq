@@ -1,0 +1,11 @@
+<div class="event-photo buffer-both text-left">
+  
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+  <% if current_user ==  photo.event.user %>
+  <%= link_to fa_icon('trash'), event_photo_path(photo.event, photo), 
+                                                    method: :delete,
+                                                    data: {confirm: t('.destroy_confirm')}%>
+  <% end %>
+  <p class="buffer-top"><%= render partial: 'users/user', object: photo.user %></p>
+
+</div>
