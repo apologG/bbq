@@ -21,6 +21,11 @@
               <%= link_to 'Изменить', edit_event_path(@event),
                 class: 'btn btn-primary' %>
             </div>
+            <div class="buffer-both">
+              <%= link_to 'Удалить', event_path(@event), class: 'btn btn-sm btn-danger', 
+                                                    method: :delete,
+                                                    data: {confirm: t('events.event.destroy_confirm')}%>
+            </div>
           <% end %>
         </div>
       </div>
