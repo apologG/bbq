@@ -5,6 +5,7 @@ ru:
       event: 'События'
       comment: 'Комментарии'
       subscription: 'Подписка'
+      photo: 'Фото'
     attributes:
       user:
         name: 'Имя'
