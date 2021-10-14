@@ -13,7 +13,6 @@ if Rails.env.production?
 
     config.fog_directory  = ENV['S3_BUCKET_NAME']
     config.fog_public = false
-    config.aws_acl = :private
     # config.fog_directory  = 'massovka-bucket'
   end
 end
