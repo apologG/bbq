@@ -10,6 +10,6 @@ if Rails.env.production?
 
     config.fog_public     = false
     config.fog_directory  = ENV['S3_BUCKET']
-    config.cache_storage  = :storage
+    config.cache_storage  = ENV['S3_BUCKET']
   end
 end
