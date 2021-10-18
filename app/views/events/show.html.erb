@@ -43,12 +43,11 @@
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         <%# </div>
       </div>%>
-
       <div class="event-comments buffer-top">
         <%= render partial: 'comments/form',
           locals: {comment: @new_comment || @event.comments.build} %>
 
-        <div class="buffer-both">
+        <div class="buffer-both" id="comments">
           <%= render partial: 'comments/comment',
             collection: @event.comments.except(@new_comment) %>
         </div>
