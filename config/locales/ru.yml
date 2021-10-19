@@ -62,3 +62,12 @@ ru:
   photos:
     photo:
       destroy_confirm: "Вы уверены что хотите удалить фото?"
+  event_mailer:
+    subscriptions:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
