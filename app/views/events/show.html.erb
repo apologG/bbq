@@ -5,7 +5,7 @@
         style: "background-image: url(#{event_photo(@event)})" %>
 
       <div class="event-info-inner row">
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <div class="event-description">
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :short %></h3>
@@ -23,11 +23,11 @@
           </div>
             <% end %>   
         </div>
-        <div class="col-sm-6" id="map"
+      </div>
+      <div class="col-md-6" id="map"
           data-address="<%= @event.address %>"
           style="width: 50%; height: 500px;">
-        </div>   
-      </div>
+      </div>   
     </div>
   </div>
 
