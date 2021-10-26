@@ -7,11 +7,23 @@ class CommentsController < ApplicationController
     @new_comment = @event.comments.build(comment_params)
     @new_comment.user = current_user
 
-    if @new_comment.save
-      redirect_to @event, notice: I18n.t('controllers.comments.created')
-    else
-      render 'events/show', alert: I18n.t('controllers.comments.error')
+    respond_to do |f|
+      if @new_comment.save
+        f.html {redirect_to @event, notice: I18n.t('controllers.comments.created')}
+        f.js
+
+      else
+        f.html { render action: 'new', alert: I18n.t('controllers.comments.error')}
+        f.js
+
+      end
     end
+
+    # if @new_comment.save
+    #   redirect_to @event, notice: I18n.t('controllers.comments.created')
+    # else
+    #   render 'events/show', alert: I18n.t('controllers.comments.error')
+    # end
   end
 
   # DELETE /comments/1

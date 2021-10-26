@@ -5,18 +5,12 @@
         style: "background-image: url(#{event_photo(@event)})" %>
 
       <div class="event-info-inner row">
-        <div class="col-md-6">
+        <div class="col-sm-6">
           <div class="event-description">
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :short %></h3>
-            <h3>
-              <small><%= link_to @event.address,
-                "https://yandex.ru/maps/?text=#{@event.address}" %></small>
-            </h3>
             <p><%= @event.description %></p>
-          </div>
-
-          <% if current_user_can_edit?(@event) %>
+            <% if current_user_can_edit?(@event) %>
             <div class="buffer-both">
               <%= link_to 'Изменить', edit_event_path(@event),
                 class: 'btn btn-primary' %>
@@ -26,8 +20,13 @@
                                                     method: :delete,
                                                     data: {confirm: t('events.event.destroy_confirm')}%>
             </div>
-          <% end %>
+          </div>
+            <% end %>   
         </div>
+        <div class="col-sm-6" id="map"
+          data-address="<%= @event.address %>"
+          style="width: 50%; height: 500px;">
+        </div>   
       </div>
     </div>
   </div>
@@ -43,12 +42,11 @@
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         <%# </div>
       </div>%>
-
       <div class="event-comments buffer-top">
         <%= render partial: 'comments/form',
           locals: {comment: @new_comment || @event.comments.build} %>
 
-        <div class="buffer-both">
+        <div class="buffer-both" id="comments">
           <%= render partial: 'comments/comment',
             collection: @event.comments.except(@new_comment) %>
         </div>
