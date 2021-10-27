@@ -18,9 +18,14 @@ gem 'rmagick'
 
 gem 'fog-aws'
 
+
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do
